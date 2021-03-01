@@ -1,28 +1,190 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>DANCERUSH 台灣交流會 / ダンスラ台湾</title>
+<html class="h-100">
 
-        <!-- I'm not sure about how Japanese and Korean are displayed but UTF-8 seems to be okay -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>DANCERUSH 台灣交流會 / ダンスラ台湾</title>
 
-        <!-- bootstrap css file is included here -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
-        <script src="multilang.js"></script>
-    </head>
-    <body>
-        <div id="app">
-            <h1>Hello World</h1>
-            <p>something should be here.</p>
-            <p>this is a github page test.</p>
+    <!-- I'm not sure about how Japanese and Korean are displayed but UTF-8 seems to be okay -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <p>{{ $t("message.test") }}</p>
-        </div>
-        <!-- The following line is for the bootstrap js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    </body>
+    <!-- bootstrap css file is included here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+    <script src="js/dictionary_index.js"></script>
+
+    <!-- font: Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <!-- Marquee CSS -->
+    <link href="marquee.css" rel="stylesheet">
+</head>
+
+<!-- Body definition, including font and background color settings-->
+
+<body class="h-100" style="font-family: 'Noto Sans TC', sans-serif; background-color: gray;">
+
+    <!-- this id=app is for multilanguage propose -->
+    <div id="app" class="d-flex flex-column h-100">
+
+        <!-- navigation bar -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+
+                    <!-- icon & navtitle -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo_small.png" alt="" width="24" height="24"
+                            class="d-inline-block align-middle">
+                        <span class="fw-bold">{{ $t("message.navbar.title") }}</span>
+                    </a>
+
+                    <!-- navbar dropdown button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcont"
+                        aria-controls="navbarcont" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- navbar content -->
+                    <div class="collapse navbar-collapse" id="navbarcont">
+                        <div class="mx-2 navbar-nav">
+                            <span class="px-2 nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="#">{{ $t("message.navbar.home") }}</a>
+                            </span>
+                            <span class="px-2 nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarTOC" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ $t("message.navbar.TOC") }}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarTOC">
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.schedule") }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.songs") }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.contestants") }}</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.rules") }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.faq") }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.links") }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ $t("message.navbar.HOF") }}</a></li>
+                                </ul>
+                            </span>
+                            <span class="px-2 nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarlang" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ $t("message.navbar.language") }}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarlang">
+                                    <li><button class="dropdown-item"
+                                            onclick="change_locale('tw')">{{ $t("message.navbar.tw") }}</button></li>
+                                    <li><button class="dropdown-item"
+                                            onclick="change_locale('en')">{{ $t("message.navbar.en") }}</button></li>
+                                    <li><button class="dropdown-item"
+                                            onclick="change_locale('jp')">{{ $t("message.navbar.jp") }}</button></li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- main content -->
+        <main class="flex-grow-1">
+
+            <!-- banner image -->
+            <div class="container"><img src="images/drstw_banner.png" class="mt-5 img-fluid"></div>
+
+            <!-- welcome message -->
+            <div class="container">
+                <div class="mt-4 p-4 bg-light rounded-3">
+                    <h2 class="fw-bold">{{ $t("message.main.welcome") }}</h2>
+                    <p class="lead">{{ $t("message.main.welcomemsg01") }}</p>
+                    <p>{{ $t("message.main.welcomemsg02") }}</p>
+                </div>
+            </div>
+
+            <!-- social media accounts -->
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between">
+                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #4267B2;" href="https://www.facebook.com/DRSTaiwan/">
+                        <div class="row g-0">
+                            <div class="col-4"><img src="images/icon_facebook.png" alt=""
+                                    class="img-fluid d-block m-auto"></div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Facebook</h5>
+                                    <p class="card-text">@DRSTaiwan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #1DA1F2;" href="https://twitter.com/DRS_Taiwan">
+                        <div class="row g-0">
+                            <div class="col-4"><img src="images/icon_twitter.png" alt=""
+                                    class="img-fluid d-block m-auto"></div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Twitter</h5>
+                                    <p class="card-text">@DRS_Taiwan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #E1306C;" href="https://www.instagram.com/drs_taiwan/">
+                        <div class="row g-0">
+                            <div class="col-4"><img src="images/icon_instagram.png" alt=""
+                                    class="img-fluid d-block m-auto"></div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Instagram</h5>
+                                    <p class="card-text">@DRS_Taiwan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #FD1D1D;" href="https://www.youtube.com/channel/UCXnlvP36hNDKcNkjPHLplfg">
+                        <div class="row g-0">
+                            <div class="col-4"><img src="images/icon_youtube.png" alt=""
+                                    class="img-fluid d-block m-auto"></div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">YouTube</h5>
+                                    <p class="card-text"><small>{{ $t("message.social.youtube") }}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- footer bar -->
+        <footer class="footer mt-4 py-3 bg-dark">
+            <div class="container text-muted">
+                <p class="lh-sm">{{ $t("message.footer.contact") }}</p>
+                <p class="lh-sm">Powered by GitHub Pages</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- moving background element. -->
+    <div class="marquee">
+        <div style="background-image: url('./images/marquee_bg.png'); background-repeat: repeat;"></div>
+    </div>
+
+    <!-- a simple script for Vue.js multilanguage settings -->
+    <script src="js/multilang.js"></script>
+
+    <!-- The following line is for the bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
