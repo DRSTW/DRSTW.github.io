@@ -53,6 +53,7 @@ const messages = {
                 title: "DANCERUSH Taiwan",
                 home: "Home",
                 TOC: "Taiwan Online Contest (TOC)",
+                TOCmain: "Page Top",
                 schedule: "Contest Schedule",
                 songs: "Entry Songs",
                 contestants: "List of Contestants",
@@ -95,6 +96,7 @@ const messages = {
                 title: "ダンスラ台湾",
                 home: "トップ",
                 TOC: "台湾オンラインコンテスト (TOC)",
+                TOCmain: "トップページ",
                 schedule: "スケジュール",
                 songs: "課題曲",
                 contestants: "参加者",
@@ -109,8 +111,8 @@ const messages = {
             },
             main: {
                 welcome: "ダンスラ台湾へようこそ！",
-                welcomemsg01: "ここはダンスラのプレーヤー達這裡是一個讓各地的 DANCERUSH STARDOM 玩家可以互相交流的地方。",
-                welcomemsg02: "最新のダンスラ情報以外、オンラインと店舗大会も開催します。特にオンラインコンテスト (TOC)は海外のプレーヤーと競うことができます。誰でも参加します！"
+                welcomemsg01: "ここにはダンスラのプレイヤー達が交流することができます。",
+                welcomemsg02: "最新のダンスラ情報以外、オンラインと店舗大会も開催します。特にオンラインコンテスト (TOC)は海外のプレイヤーと競うことができます。誰でも参加します！"
             },
             TOC: {
                 title: {
