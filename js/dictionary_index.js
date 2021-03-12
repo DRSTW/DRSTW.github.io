@@ -1,7 +1,7 @@
 // This is the dictionary file for the link below:
 // https://drstw.github.io/index.html
-// en:
-// jp: 
+// en: 
+// jp: completed on 2020/03/13 by Adam36
 
 const messages = {
     tw: {
@@ -64,6 +64,27 @@ const messages = {
                 tw: "🇹🇼 繁體中文",
                 en: "🇺🇸 English",
                 jp: "🇯🇵 日本語"
+            },
+            main: {
+                welcome: "Welcome to DANCERUSH Taiwan!",
+                welcomemsg01: "It's a place for DANCERUSH STARDOM players to (communicate).",
+                welcomemsg02: "Besides the latest information of DANCERUSH, online and offline events would be held. Most important of all, we'll hold the Taiwan Online Contest(TOC). You can competite with players from different countries, and everyone is welcomed to participate!"
+            },
+            TOC: {
+                title: {
+                    t1: "DANCERUSH STARDOM Taiwan Online Contest 2021",
+                    t2: "(TOC2021)"
+                },
+                alert: {
+                    heading: "Attention:",
+                    content: "Due to the raising of COVID-19 pandemic, the contest would be cancelled in the case of emergency. Please put on your mask and wash your hands to be a hero in this pandemic."
+                },
+            },
+            social: {
+                youtube: "DANCERUSH Taiwan"
+            },
+            footer: {
+                contact: "This site is built by Nerova (@NerovaRiuzGX). If you have any problem during visiting, please feel free to contact us in the social media above."
             }
         }
     },
@@ -74,17 +95,38 @@ const messages = {
                 title: "ダンスラ台湾",
                 home: "トップ",
                 TOC: "台湾オンラインコンテスト (TOC)",
-                schedule: "",
-                songs: "",
-                contestants: "",
-                rules: "",
-                faq: "",
-                links: "",
-                HOF: "",
+                schedule: "スケジュール",
+                songs: "課題曲",
+                contestants: "参加者",
+                rules: "ルール",
+                faq: "よくある質問",
+                links: "リンク",
+                HOF: "栄誉殿堂",
                 language: "🇯🇵 日本語",
                 tw: "🇹🇼 繁體中文",
                 en: "🇺🇸 English",
                 jp: "🇯🇵 日本語"
+            },
+            main: {
+                welcome: "ダンスラ台湾へようこそ！",
+                welcomemsg01: "ここはダンスラのプレーヤー達這裡是一個讓各地的 DANCERUSH STARDOM 玩家可以互相交流的地方。",
+                welcomemsg02: "最新のダンスラ情報以外、オンラインと店舗大会も開催します。特にオンラインコンテスト (TOC)は海外のプレーヤーと競うことができます。誰でも参加します！"
+            },
+            TOC: {
+                title: {
+                    t1: "DANCERUSH STARDOM 台湾オンラインコンテスト 2021",
+                    t2: "DANCERUSH STARDOM Taiwan Online Contest 2021 (TOC2021)"
+                },
+                alert: {
+                    heading: "ご注意ください",
+                    content: "今はまたコロナの拡散可能性があります。念のために、パンデミックによって、大会は停止となります。ゲームセンターがいる時に、必ずマスクを着用して、手を洗うしてください。小さな一歩で、自身と他人を守ることができます。"
+                },
+            },
+            social: {
+                youtube: "ダンスラ台湾チャンネル"
+            },
+            footer: {
+                contact: "サイト管理者：Nerova (@NerovaRiuzGX)。質問があるの場合は、上記のSNSでお気軽にお問い合わせください。"
             }
         }
     }
