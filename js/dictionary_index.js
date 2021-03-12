@@ -67,7 +67,7 @@ const messages = {
             },
             main: {
                 welcome: "Welcome to DANCERUSH Taiwan!",
-                welcomemsg01: "It's a place for DANCERUSH STARDOM players to (communicate).",
+                welcomemsg01: "It's a place for DANCERUSH STARDOM players to communicate.",
                 welcomemsg02: "Besides the latest information of DANCERUSH, online and offline events would be held. Most important of all, we'll hold the Taiwan Online Contest(TOC). You can competite with players from different countries, and everyone is welcomed to participate!"
             },
             TOC: {
