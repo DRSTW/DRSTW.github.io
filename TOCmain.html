@@ -23,7 +23,6 @@
 
     <!-- vue.js and i18n files are included here -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
 
     <!-- dictionary file. -->
@@ -109,77 +108,35 @@
         <!-- main content -->
         <main class="flex-grow-1">
 
-            <!-- banner image -->
-            <div class="container"><img src="images/drstw_banner.png" class="mt-5 img-fluid"></div>
-
-            <!-- welcome message -->
+            <!-- title message -->
             <div class="container">
-                <div class="mt-4 p-4 bg-light rounded-3">
-                    <h2 class="fw-bold">{{ $t("message.main.welcome") }}</h2>
-                    <p class="lead">{{ $t("message.main.welcomemsg01") }}</p>
-                    <p>{{ $t("message.main.welcomemsg02") }}</p>
+                <div class="mt-5 p-4 text-white text-center bg-dark rounded-3">
+                    <h1 class="fw-bold">{{ $t("message.TOC.title.t1") }}</h1>
+                    <p class="lead">{{ $t("message.TOC.title.t2") }}</p>
                 </div>
             </div>
 
-            <!-- social media accounts -->
             <div class="container">
-                <div class="d-flex flex-wrap justify-content-between">
-                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #4267B2;"
-                        href="https://www.facebook.com/DRSTaiwan/">
-                        <div class="row g-0">
-                            <div class="col-4"><img src="images/icon_facebook.png" alt=""
-                                    class="img-fluid d-block m-auto"></div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Facebook</h5>
-                                    <p class="card-text">@DRSTaiwan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #1DA1F2;"
-                        href="https://twitter.com/DRS_Taiwan">
-                        <div class="row g-0">
-                            <div class="col-4"><img src="images/icon_twitter.png" alt=""
-                                    class="img-fluid d-block m-auto"></div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Twitter</h5>
-                                    <p class="card-text">@DRS_Taiwan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #E1306C;"
-                        href="https://www.instagram.com/drs_taiwan/">
-                        <div class="row g-0">
-                            <div class="col-4"><img src="images/icon_instagram.png" alt=""
-                                    class="img-fluid d-block m-auto"></div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Instagram</h5>
-                                    <p class="card-text">@DRS_Taiwan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="mt-4 card link-light" style="max-width: 300px; background-color: #FD1D1D;"
-                        href="https://www.youtube.com/channel/UCXnlvP36hNDKcNkjPHLplfg">
-                        <div class="row g-0">
-                            <div class="col-4"><img src="images/icon_youtube.png" alt=""
-                                    class="img-fluid d-block m-auto"></div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">YouTube</h5>
-                                    <p class="card-text"><small>{{ $t("message.social.youtube") }}</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <div class="mt-4 p-4 alert alert-danger">
+                    <h4 class="text-center fw-bold alert-heading">{{ $t("message.TOC.alert.heading") }}</h4>
+                    {{ $t("message.TOC.alert.content") }}
                 </div>
-
             </div>
 
+            <div class="container">
+                <div class="mt-4 row">
+                    <div class="col-lg-8">
+                        <div class="p-4 bg-light rounded-3">
+                            5465132
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="p-4 bg-light rounded-3">
+                            84152154
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- footer bar -->
@@ -189,6 +146,7 @@
                 <p class="lh-sm">Powered by GitHub Pages</p>
             </div>
         </footer>
+
     </div>
 
     <!-- moving background element. -->
